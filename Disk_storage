@@ -1,0 +1,42 @@
+To list partitions: use TYPE column to check if disk or partition
+lsblk
+
+A partition is formed of a disk e.g if disks are sda, sdb, sdc partition of sda would be sda1,sda2, sda3
+
+dev points to the entire device :
+dev/sda
+
+To list partition on block device
+sudo fdisk --list /dev/sda
+
+To create partition use cfdisk
+sudo cfdisk /dev/sdb
+
+next
+select label type
+gpt (usually for newer) or
+dos (for older) ppt uses dos
+
+next nav to free space under Device tab and press enter to select [New]
+
+next enter your desired Partition size
+
+next it will bring you back to Device list/view with diff options
+
+next if you still have more free space to partition click down arrow to go down list back to [New] and enter size
+
+if you need to resize 
+select device you want to resize
+nav to resize tab and press enter
+resize as needed
+
+You can use sort button to order device more semantically
+
+Use delete button to delete a partition and free up the space
+
+Use Type button to change file type
+
+To save and make changes enter [Write] button
+type 'yes' to save changes and finalize
+
+Enter [Quit] to exit
