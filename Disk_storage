@@ -51,3 +51,7 @@ lsblk
 To turn off swapsudo 
 swapoff /dev/vdb2
 
+To mount filesystem at or during boot
+sudo vim /etc/fstab
+to save changes
+sudo systemctl daemon-reload
