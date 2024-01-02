@@ -40,3 +40,14 @@ To save and make changes enter [Write] button
 type 'yes' to save changes and finalize
 
 Enter [Quit] to exit
+
+To make a partition a SWAP
+sudo mkswap /dev/vdb2
+sudo swapon /dev/vdb2
+To verify change
+sudo swapon --show
+lsblk
+
+To turn off swapsudo 
+swapoff /dev/vdb2
+
