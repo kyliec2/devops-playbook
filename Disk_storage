@@ -55,3 +55,6 @@ To mount filesystem at or during boot
 sudo vim /etc/fstab
 to save changes
 sudo systemctl daemon-reload
+To get uuid for fstab
+sudo blkid <device name>
+sudo blkid /dev/vdb1
