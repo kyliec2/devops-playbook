@@ -58,3 +58,23 @@ sudo systemctl daemon-reload
 To get uuid for fstab
 sudo blkid <device name>
 sudo blkid /dev/vdb1
+
+Evaluate and compare the basic file system features and options
+To list all mounts
+findmnt
+findmnt -t xfs
+for multiple fs at a time
+findmnt -t xfs,ext4 
+
+To give dir permissions during mount
+sudo mount -o ro /dev/vdb2 /mnt
+
+To mount remote nfs
+sudo mount IP_or_hostname_of_server:/path/to/remote/directory /path/to/local/directory
+
+To unmount
+sudo umount /mnt
+
+To enable at boot
+sudo vim /etc/fstab
+ip_add:/etc/mnt nfs defaults 0 0
